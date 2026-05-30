@@ -5,9 +5,7 @@ import SignupPage from "./pages/SignupPage";
 import Dashboard from "./pages/Dashboard";
 import Send from "./pages/Send";
 
-
 function App() {
-
   return (
     <div>
       <Routes>
@@ -17,7 +15,7 @@ function App() {
         <Route path="/send" element={<Send />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
