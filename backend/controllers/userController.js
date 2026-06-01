@@ -16,6 +16,7 @@ export const userSignup = async (req, res) => {
 
   try {
     const userDetails = requiredBody.safeParse(req.body);
+    
 
     if (!userDetails.success) {
       return res.status(411).json({
@@ -81,7 +82,7 @@ export const userSignin = async (req, res) => {
 
     if (!existingUser) {
       return res.status(411).json({
-        message: "Error while logging in",
+        message: "User not exists",
       });
     }
 

@@ -1,4 +1,6 @@
-const InputBox = ({ type, placeholder, label, ref }) => {
+import { forwardRef } from "react";
+
+const InputBox = forwardRef(({ type, placeholder, label }, ref) => {
   return (
     <div className="flex flex-col gap-2">
       <label className="font-bold text-lg text-neutral-900">{label}</label>
@@ -10,6 +12,6 @@ const InputBox = ({ type, placeholder, label, ref }) => {
       />
     </div>
   );
-};
+});
 
 export default InputBox;
