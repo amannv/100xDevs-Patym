@@ -11,6 +11,6 @@ const userRouter = Router();
 userRouter.post("/signup", userSignup);
 userRouter.post("/signin", userSignin);
 userRouter.patch("/updateprofile", authMiddleware, updateProfile);
-userRouter.get("/bulk", findUser);
+userRouter.get("/bulk", authMiddleware, findUser);
 
 export default userRouter;

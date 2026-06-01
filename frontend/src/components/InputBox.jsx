@@ -1,11 +1,12 @@
 import { forwardRef } from "react";
 
-const InputBox = forwardRef(({ type, placeholder, label }, ref) => {
+const InputBox = forwardRef(({ type, placeholder, label, onChange }, ref) => {
   return (
     <div className="flex flex-col gap-2">
       <label className="font-bold text-lg text-neutral-900">{label}</label>
       <input
         ref={ref}
+        onChange={onChange}
         className="border border-neutral-300 w-full rounded-md py-2 px-2 text-sm"
         type={type}
         placeholder={placeholder}
